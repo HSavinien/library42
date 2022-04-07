@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:08:59 by tmongell          #+#    #+#             */
-/*   Updated: 2022/03/08 08:49:04 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/04/07 03:55:13 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define GET_NEXT_LINE_H
 # include <stdlib.h>
 # include <unistd.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 //functions from get_next_line.c
 char	*get_next_line(int fd);
