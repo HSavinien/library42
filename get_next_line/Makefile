@@ -10,7 +10,7 @@ CC		= gcc
 
 CFLAGS	= -Wall -Wextra -Werror
 
-NAME	= gnl.a
+NAME	= get_next_line.a
 
 #rules    -------------------------------------------------------------    rules
 
