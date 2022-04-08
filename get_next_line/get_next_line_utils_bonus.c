@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 04:16:01 by tmongell          #+#    #+#             */
-/*   Updated: 2022/02/17 04:49:30 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/04/08 15:27:48 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,7 @@ size_t	ft_strlen(const char *s)
 		return (0);
 	i = 0;
 	while (s[i])
-	{
 		i ++;
-	}	
 	return (i);
 }
 
