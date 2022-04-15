@@ -6,11 +6,11 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 04:17:03 by tmongell          #+#    #+#             */
-/*   Updated: 2022/03/08 08:52:17 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/04/15 21:22:51 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 #define MAX_FD 255
 
 char	*get_next_line(int fd)
