@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:08:59 by tmongell          #+#    #+#             */
-/*   Updated: 2022/04/07 03:55:13 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:28:59 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int		got_end_of_line(char *str);
 int		multiple_line_in_str(char	*str);
 void	*do_free(void *ptr);
 //functions from get_next_line_utils.c
-char	*ft_strdup(const char *s1);
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-void	*ft_memset(void *b, int c, size_t len);
+char	*gnl_strdup(const char *s1);
+size_t	gnl_strlen(const char *s);
+size_t	gnl_strlcpy(char *dst, const char *src, size_t dstsize);
+void	*gnl_memset(void *b, int c, size_t len);
 #endif

@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:40:28 by tmongell          #+#    #+#             */
-/*   Updated: 2022/04/15 21:20:37 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:29:17 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char	*gnl_strdup(const char *s1)
 	size_t	len;
 
 	if (!s1)
-		return (ft_strdup(""));
-	len = ft_strlen(s1) + 1;
+		return (gnl_strdup(""));
+	len = gnl_strlen(s1) + 1;
 	cpy = malloc(len);
 	if (cpy == NULL)
 		return (NULL);
-	ft_strlcpy(cpy, s1, len);
+	gnl_strlcpy(cpy, s1, len);
 	return (cpy);
 }
 
@@ -50,7 +50,7 @@ size_t	gnl_strlcpy(char *dst, const char *src, size_t dstsize)
 		i ++;
 	}
 	dst[i - 1] = '\0';
-	return ((size_t)ft_strlen(src));
+	return ((size_t)gnl_strlen(src));
 }
 
 void	*gnl_memset(void *b, int c, size_t len)
