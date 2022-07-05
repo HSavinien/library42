@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:07:17 by tmongell          #+#    #+#             */
-/*   Updated: 2022/05/16 18:35:02 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:03:10 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	static char	*leftover;
 	int			read_ret;
+
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
 	line = gnl_strdup(leftover);
