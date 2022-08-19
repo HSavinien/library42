@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:58:38 by tmongell          #+#    #+#             */
-/*   Updated: 2022/03/19 19:33:40 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/08/19 18:29:45 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 #ifndef FORMATING_H
 
-//utilities
-
-# define STRINGIZE(x) STRINGIZE_BIS(x)
-# define STRINGIZE_BIS(x) #x
 //basics
 
 # define ESC_CHAR ""
@@ -38,9 +34,5 @@
 # define CYAN "[36m"
 # define BLACK "[30m"
 # define WHITE "[37m"
-//useful strings
-
-# define LINE_NB STRINGIZE(__LINE__)
-# define DEBUG "debug("__FILE__":"LINE_NB"l) : "
 
 #endif
