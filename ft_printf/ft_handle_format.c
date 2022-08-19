@@ -6,30 +6,30 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 19:44:43 by tmongell          #+#    #+#             */
-/*   Updated: 2022/06/03 19:40:04 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/08/19 18:19:59 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_handle_format(char form, va_list ap)
+int	ft_handle_format(int fd, char form, va_list ap)
 {
 	if (form == '%')
-		return (write(1, "%", 1));
+		return (write(fd, "%", 1));
 	else if (form == 'c')
-		return (ft_printchar(va_arg(ap, int)));
+		return (ft_printchar(fd, va_arg(ap, int)));
 	else if (form == 's')
-		return (ft_printstr(va_arg(ap, char *)));
+		return (ft_printstr(fd, va_arg(ap, char *)));
 	else if (form == 'p')
-		return (ft_printptr(va_arg(ap, void *)));
+		return (ft_printptr(fd, va_arg(ap, void *)));
 	else if (form == 'i' || form == 'd')
-		return (ft_printnbr(va_arg(ap, int)));
+		return (ft_printnbr(fd, va_arg(ap, int)));
 	else if (form == 'u')
-		return (ft_printbase(va_arg(ap, unsigned int), "0123456789"));
+		return (ft_printbase(fd, va_arg(ap, unsigned int), "0123456789"));
 	else if (form == 'x')
-		return (ft_printbase(va_arg(ap, unsigned int), "0123456789abcdef"));
+		return (ft_printbase(fd, va_arg(ap, unsigned int), "0123456789abcdef"));
 	else if (form == 'X')
-		return (ft_printbase(va_arg(ap, unsigned int), "0123456789ABCDEF"));
+		return (ft_printbase(fd, va_arg(ap, unsigned int), "0123456789ABCDEF"));
 	else
 		return (-1);
 }

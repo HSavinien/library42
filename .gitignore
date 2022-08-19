@@ -4,3 +4,4 @@ refmain.c
 *.swp
 *.o
 libft.a
+libftprintf.a

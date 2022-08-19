@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:53:48 by tmongell          #+#    #+#             */
-/*   Updated: 2022/06/03 19:40:06 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/08/19 18:21:06 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static int	*ft_get_digits(long unsigned int nb, size_t basesize, size_t len)
 //get a number, get a base, display the number in the base. in case of error,
 //return a negative nb. else, return the nb of char printed.
 //the function does not handle negative number
-int	ft_printbase(long unsigned int nb, char *base)
+int	ft_printbase(int fd, long unsigned int nb, char *base)
 {
 	int		*digits;
 	size_t	i;
@@ -96,7 +96,7 @@ int	ft_printbase(long unsigned int nb, char *base)
 	i = 0;
 	while (i < nblen)
 	{
-		write(1, base + digits[i], 1);
+		write(fd, base + digits[i], 1);
 		i ++;
 	}
 	free(digits);

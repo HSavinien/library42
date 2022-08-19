@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:48:45 by tmongell          #+#    #+#             */
-/*   Updated: 2022/08/19 18:27:59 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/08/19 18:28:51 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_retvalue(int localretvalue, int *error)
 		return (localretvalue);
 }
 
-int	ft_printf(const char *str, ...)
+int	ft_dprintf(int fd, const char *str, ...)
 {
 	int		i;
 	int		retvalue;
@@ -39,11 +39,11 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			i ++;
-			retvalue += ft_retvalue(ft_handle_format(1, str[i], ap), &error);
+			retvalue += ft_retvalue(ft_handle_format(fd, str[i], ap), &error);
 		}
 		else
 		{
-			write(1, &str[i], 1);
+			write(fd, &str[i], 1);
 			retvalue ++;
 		}
 		i ++;

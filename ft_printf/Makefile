@@ -1,4 +1,5 @@
 SRCS		=	ft_printf.c \
+				ft_dprintf.c \
 				ft_handle_format.c \
 				ft_printchar.c \
 				ft_printstr.c \
