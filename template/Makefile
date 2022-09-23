@@ -8,7 +8,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 LIB		=	-L./lib/ft_printf -lftprintf -L./lib/libft -lft
 
-NAME	=	pipex
+NAME	=	project_name
 
 #rules    -------------------------------------------------------------    rules
 
