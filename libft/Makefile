@@ -41,6 +41,8 @@ SRCS	=	ft_isdigit.c \
 			ft_lstdelone.c \
 			ft_reset_ptr.c \
 			ft_isspace.c \
+			ft_isupcase.c \
+			ft_islowcase.c \
 			ft_split_word.c \
 			ft_memdup.c \
 			get_next_line.c \
