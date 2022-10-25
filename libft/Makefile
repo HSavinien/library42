@@ -48,6 +48,7 @@ SRCS	=	ft_isdigit.c \
 			get_next_line.c \
 			get_next_line_utils.c \
 			get_next_line_bonus.c \
+			ft_char_in_set.c \
 
 OBJS	= ${SRCS:.c=.o}
 
