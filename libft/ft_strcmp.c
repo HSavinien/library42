@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_in_set.c                                   :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cmaroude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 19:19:44 by tmongell          #+#    #+#             */
-/*   Updated: 2022/10/25 20:07:39 by tmongell         ###   ########.fr       */
+/*   Created: 2022/05/07 12:18:23 by cmaroude          #+#    #+#             */
+/*   Updated: 2022/11/03 19:00:06 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//function that check if char c is in string set.
-int	char_in_set(char c, char *set)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i ++])
-			return (1);
-	}
-	return (0);
+	return (ft_strncmp(s1, s2, ft_min(ft_strlen(s1), ft_strlen(s2)) + 1));
 }

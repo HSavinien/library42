@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_in_set.c                                   :+:      :+:    :+:   */
+/*   ft_min_max.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 19:19:44 by tmongell          #+#    #+#             */
-/*   Updated: 2022/10/25 20:07:39 by tmongell         ###   ########.fr       */
+/*   Created: 2022/11/03 18:34:10 by tmongell          #+#    #+#             */
+/*   Updated: 2022/11/03 18:44:32 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//function that check if char c is in string set.
-int	char_in_set(char c, char *set)
+int	ft_min(int nbo, int nbt)
 {
-	int	i;
+	if (nbo > nbt)
+		return (nbt);
+	return (nbo);
+}
 
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i ++])
-			return (1);
-	}
-	return (0);
+int	ft_max(int nbo, int nbt)
+{
+	if (nbo > nbt)
+		return (nbo);
+	return (nbt);
 }
